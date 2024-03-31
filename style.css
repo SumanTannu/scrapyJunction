@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* global variable */
+:root{
+    --yellow:rgb(165, 165, 17);
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,1);
+    --border:2rem solid rgba(0,0,0.1);
+    --outline:.2rem solid rgba(0,0,0.1);
+}
+*
+{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body
+{
+    background: #eee;
+}
+/* css code for banner*/
+section
+{
+    padding: 2rem 9%;
+}
+.header
+{
+    border: 0px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo
+{
+    font-size: 3.0rem;
+    font-weight: bolder;
+}
+.header .logo i
+{
+    color:var(--yellow);
+}
+.header .navbar a
+{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+.header .navbar a:hover 
+{
+    color:var(--yellow);
+}
+.header .icons div
+{
+    height: 4.5rem;
+    width: 4.5rem;
+    border: 0px solid;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons div:hover
+{
+    background: var(--yellow);
+    color:#fff
+}
+#menu-btn
+{
+    display: none;
+}
+.header .search-form
+{
+    border: 0px solid;
+    position: absolute;
+    top: 100%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background: #eee;
+    border-radius: .5rem;
+    overflow:hidden;
+    display: flex;
+    align-items:center;
+    box-shadow: var(--box-shadow);
+
+}
+.header .search-form.active
+{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .search-form input
+{
+    margin-top: 1rem;
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0rem 1.5rem;
+}
+.header .search-form label
+{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover
+{
+    color: var(--yellow);
+}
+.btn
+{
+    border: .3rem solid var(--black);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+.btn:hover
+{
+    background: var(--yellow);
+    color:#fff;
+
+}
+.login-form
+{
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    width: 35rem;
+    right: -110rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+.login-form.active
+{
+    transition: .4s linear;
+    right: 2rem;
+}
+
+.login-form h3
+{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.login-form .box
+{
+    border: 0px solid;
+    margin: .7rem;
+    background:#eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+}
+.login-form p
+{
+    font-size: 1.4rem;
+    padding: .5rem;
+    color: var(--light-color);
+}
+.login-form p a
+{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+.home
+{
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    background: url(../pics/creative-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+.home .content
+{
+    border: 0px solid;
+    text-align: center;
+    width: 80rem;
+}
+.home .content h3
+{
+    color:#fff;
+    font-size: 5rem;
+}
+.home .content h3 span
+{
+    color: var(--yellow);
+}
+.home .content p
+{
+    color:#fff;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.heading
+{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+}
+.heading span
+{
+    background: var(--yellow);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+
+/*features*/
+.features .box-container
+{
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.features .box-container .box
+{
+    border: 0px solid;
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+.features .box-container .box img
+{
+    margin: 1rem 0;
+    height: 20rem;
+    width: 35rem;
+}
+/*features*/
+.sections
+{
+    padding-top: 8rem;
+    padding-left:.5rem ;
+}
+/*products*/
+#products .pro-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#products .box
+{
+    width: 23%;
+    min-width: 250px;
+    padding: 3rem 2rem;
+    border: 1px solid var(--black);
+    border-radius: .5rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    margin: 1rem 0;
+}
+#products h1
+{
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 3rem;
+    color: var(--black);
+    font-weight: 600;
+}
+#products .box img
+{
+    width: 100%;
+}
+#products .box h1
+{
+    padding: 10px 0;
+}
+#products .box .price
+{
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+#products .box .stars
+{
+    color: orange;
+    font-size: 14px;
+}
+/*products*/
+.testimonials
+{
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    background: url(../pics/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    font-size: large;
+    color: var(--black);
+}
+.testimonials img
+{
+    border-radius: 50rem;
+    height: 40px;
+    border: 2px solid #fff;
+}
+.testimonials p
+{
+    padding-top: 3rem;
+    text-align: center;
+}
+/*Footer Css*/
+.footer
+{
+    background: #fff;
+}
+.footer .box-container
+{
+    border: 0px solid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(26rem,2fr));
+    gap: 1.5rem;
+}
+.footer .box-container .box h3
+{
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box h3 i
+{
+    color: var(--yellow);
+}
+
+.footer .box-container .box .links
+{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .links i
+{
+    color: var(--yellow);
+    padding-right: .5rem;
+}
+.footer .box-container .box .links:hover i
+{
+    padding-right: 2rem;
+}
+.footer .box-container .box p
+{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .share a
+{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: .2rem;
+    background: #eee;
+    text-align: center;
+}
+.footer .box-container .box .share a:hover
+{
+    background-color: var(--yellow);
+    color: #fff;
+}
+.footer .box-container .box .email
+{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+/*Footer Css*/
+/*Our Products Css*/
+#pagination
+{
+    text-align: center;
+}
+#pagination a
+{
+    text-decoration: none;
+    background-color: var(--black);
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+#pagination a i
+{
+    font-size: 16px;
+    font-weight: 600px;
+}
+/*Scrapyard section*/
+.page-header
+{
+    background: url(../pics/creative-banner.jpg);
+    width: 100%;
+    height: 30vh;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 20rem;
+    font-size:2rem;
+    color:#fff;
+    text-align: center;
+}
+.page-header-text {
+    margin-top: 1rem;
+}
+.page-header h1
+{
+    color: #fff;
+}
+.page-header p
+{
+    color: #fff;
+}
+.page-header span{
+    color: var(--yellow);
+    font-weight: 600;
+}
+/*Scrapyard section*/
+/*sell-section Css*/
+.sell {
+    background-color: #fff;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sell h1 {
+    padding-top: 7rem;
+    color:var(--black);
+}
+.sell-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 2rem;
+}
+.sell-container button {
+    background-color:var(--black);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 20px 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    outline: none;
+}
+.sell-container button:hover {
+    background-color:var(--yellow);
+}
+.hidden {
+    display: none;
+}
+label{
+    font-size: 18px;
+}
+input[type="text"] {
+    font-size: 18px; /* Increased font size for input fields */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+/*sell-section Css*/
+/*about us section*/
+.about {
+    max-width:100%;
+    margin: 70px auto 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 5rem;
+    border-radius: 5px;
+    box-shadow:var(--box-shadow);
+    text-align: justify;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2 {
+    font-size:3rem;
+    color:var(--black);
+    text-align: center;
+    margin-top: 0;
+}
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 0;
+    color: var(--black);
+}
+
+.about-image-container img {
+    float: right; 
+    margin: 20px; 
+    max-width:500px;
+    height:500;
+    border-radius: 5px;
+
+}
+/*about us section*/
+/*ConatctUs Css*/
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 90px;
+    border-radius: 8px;
+    box-shadow:var(--box-shadow);
+}
+.contact-container h1
+{
+    padding-top: 1.5rem;
+    color: var(--black);
+    text-align: center;
+    font-size: 3rem;
+}
+.contact-container p
+{
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-align: center;
+}
+.contact-container label
+{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color:var(--black);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color:var(--yellow);
+        }
+
+/*ConatctUs Css*/
+/*single product css */
+#pro-details
+{
+    display:flex;
+    margin-top: 30px;
+}
+#pro-details .single-pro-img
+{
+    width: 40%;
+    margin-right: 50px;
+}
+.small-img-grp
+{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col
+{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+#pro-details .single-pro-details
+{
+    width: 50%;
+    padding-top: 50px;
+}
+#pro-details .single-pro-details h1
+{
+    text-align: left;
+    padding: 40px 0 20px 0;
+}
+#pro-details .single-pro-details h3
+{
+    font-size: 26px;
+    text-align: left;
+    padding: 40px 0 20px 0;
+}
+#pro-details .single-pro-details input
+{
+    width: 50px;
+    height: 47px;
+    padding-left:10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#pro-details .single-pro-details span
+{
+    line-height: 25px;
+
+}
+
+/*single product css */
+/*sell section */
+.sub-header
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 10rem;
+}
+.sub-header .note {
+    width: 100%; /* Ensure the .note div takes up the full width */
+    text-align: center; 
+}
+
+.sub-header h3 {
+    color: rgb(62, 171, 62);
+    font-size: 20px;
+}
+.message-box {
+    background-color: #f0f0f0;
+    border:.1rem solid rgb(0, 0, 0);;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.message-box i
+{
+    color: var(--black);
+}
+
+
+.highlight {
+    color: rgb(62, 171, 62);
+    font-weight: bold;
+}
+/*sell section */
+/*create account form */
+.createacc form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:var(--box-shadow);
+    max-width: 600px;
+  }
+  .createacc-container{
+    padding-top: 10rem;
+    margin: 0px auto;
+  }
+  .createacc h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  .createacc div {
+    margin-bottom: 15px;
+  }
+
+  .createacc label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:var(--black);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color:var(--yellow);
+  }
+
+/*create account form */

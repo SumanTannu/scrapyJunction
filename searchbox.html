@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Poppins','sans-serif';
+            box-sizing: border-box;
+        }
+        body{
+            background: #262a2f;
+            color: #333;
+        }
+        .search-box{
+            width: 600px;
+            background: #fff;
+            margin: 200px auto 0;
+            border-radius: 5px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        input{
+            flex: 1;
+            height: 50px;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        button{
+            background: transparent;
+            border: 0;
+            outline: 0;
+        }
+        button .fa-solid{
+            width: 25px;
+            color: #555;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        ::placeholder{
+            color: #555;
+        }
+        .result-box ul
+        {
+            border-top: 1px solid #999;
+            padding: 15px 10px;
+        }
+        .result-box ul li{
+            list-style: none;
+            border-radius: 3px;
+            padding: 15px 10px;
+        }
+        .result-box ul li:hover{
+            background: #e9f3ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search Here" autocomplete="off">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="result-box">
+            <ul>
+                <li>Coconut Candle</li>
+                <li>Stone Birds</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
